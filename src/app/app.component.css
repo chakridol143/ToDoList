@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Rock+Salt&display=swap');
+
+.container{
+    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.main{
+    background-color: rgb(251,251,251);
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left:20px ;
+    
+}
+h2{
+    text-align: center;
+    font-family: "Rock Salt",cursive;
+    font-weight: 900;
+    font-style:italic;
+    text-align: center;
+}
+input{
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    padding-left: 5px;
+    border-radius: 6px;
+}
+button{
+    width: 60px;
+    cursor: pointer;
+    height: 32px;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(53,143,181,255);
+}
+button:hover{
+    scale: 1.05;
+}
+#bin{
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+}
+
+h1{
+    font-family: "Rock Salt",cursive;
+    font-weight: 900;
+    font-style:italic;
+    text-align: center;
+}
+h3{
+    font-family: "Gotu", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+}
+ul{
+    padding-left: 160px;
+}
+
+#img2{
+    width: 26px;
+    height: 28px;
+    cursor: pointer;
+}
+#img2:hover{
+    scale: 1.065;
+}
+#cBox
+{
+ width: 16px;
+ cursor:pointer;
+}
+#cBox:hover{
+scale: 1.05;
+}
+#taskList{
+     display: flex;
+     column-gap:100px;
+     padding-left: 20px;padding-right: 20px;
+     justify-content:space-between;
+}
+li{
+    font-size: 22px;
+    list-style: none;
+    font-family: "Gotu", serif;
+    font-weight: 600;
+    font-style:normal;
+}
+#li2{
+    text-decoration: line-through;
+}
