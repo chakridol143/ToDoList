@@ -10,33 +10,37 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'todo';
-  taskText:string=''
-  completedTask:string[]=[]
-  tasks:string[]=[]
+  taskList:string[]=[]
+  task_Text:string=''
+  taskComplete:string[]=[]
+  taskText(event:any){
+     this.task_Text=event.target.value
+     
+  }
   AddTask(){
-    let i:any = document.getElementById("in")
-    if(this.taskText==''){
-      window.alert("Your input task is empty..");
+    if(this.task_Text==""){
+      window.alert("Your input Task is empty.")
     }
     else{
-      this.tasks.push(this.taskText);
-      this.taskText=''
+      this.taskList.push(this.task_Text)
+      this.task_Text=""
+      let inputClear:any = document.getElementById("in");
+       inputClear.value="";
     }
     
-      i.value=null
   }
-  AddText(event:any){
-   this.taskText= (event.target.value)
-  }
-  delete(index:any){
-    const audio= new Audio("assets/Delete.m4a")
+  Delete(index:any){
+    const audio = new Audio("assets/Delete.m4a")
     audio.play();
-    this.tasks.splice(index,1)
+    this.taskList.splice(index,1)
   }
-  CompletedTask(index:any){
-    const audio= new Audio("assets/Completed.m4a")
+  Complete(index:any){
+    const audio = new Audio("assets/Completed.m4a")
     audio.play();
-    this.completedTask.push(this.tasks[index])
-    this.tasks.splice(index,1)
+    setTimeout(()=>{
+      this.taskComplete.push(this.taskList[index])
+      this.taskList.splice(index,1);
+    },500)
+    
   }
 }

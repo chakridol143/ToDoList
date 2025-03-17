@@ -2,22 +2,22 @@
   <div class="main">
         <h1>To Do List</h1>
         <h3>Plan your task and achive maximum productivity.</h3>
-        <div id="bin"><input id="in" (input)="AddText($event)" ><button (click)="AddTask()">Add Task</button>
+        <div id="bin"><input id="in" (input)="taskText($event)" ><button (click)="AddTask()">Add Task</button>
         </div>
        <br/>
-       <div id="taskList" *ngFor="let t of tasks; let ind = index">
+       <div id="taskList" *ngFor="let tl of taskList; let ind = index">
         
-          <input id="cBox" (click)="CompletedTask(ind)" on type="checkbox">
-          <li>{{t}}</li>
-          <img id="img2" (click)="delete(ind)" src="assets/trash.png">
+          <input id="cBox" (input)="Complete(ind)" type="checkbox">
+          <li>{{tl}}</li>
+          <img id="img2" (click)="Delete(ind)" src="assets/trash.png">
        
        
     
        </div> <br/>
-            <img id="img1" *ngIf="tasks.length===0" src="assets/Task.jpg" width="250px" height="250px">
+            <img id="img1" *ngIf="taskList.length==0" src="assets/Task.jpg" width="250px" height="250px">
            
-            <h2 *ngIf="completedTask.length !=0">Completed Tasks :</h2>
-            <li id="li2" align="center" *ngFor="let ct of completedTask">{{ct}}</li>
-  </div>
+            <h2 *ngIf="taskComplete.length!=0">Completed Tasks :-</h2>
+            <li id="li2" *ngFor="let ct of taskComplete"  >{{ct}}</li>
+          </div>
  
 </div>
